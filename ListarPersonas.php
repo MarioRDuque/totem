@@ -32,7 +32,6 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 <div class="col-1"></div>
     <div class="col-10">
 		<h1>Lista De Personas</h1>
-		<a href="//parzibyte.me/blog" target="_blank">By Parzibyte</a>
 		<br>
 		<div class="table-responsive">
 			<table class="table table-bordered">
@@ -59,7 +58,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 							<td><?php echo $totem->apellidos ?></td>
 							<td><?php echo $totem->rut ?></td>
 							<td><?php echo $totem->rfid ?></td>
-							<td><a class="btn btn-danger" href="<?php echo "EditarPersonas.php?id=" . $totem->id_persona?>">Editar</a></td>
+							<td><a class="btn btn-success" href="<?php echo "EditarPersonas.php?id=" . $totem->id_persona?>">Editar</a></td>
 							<td><a class="btn btn-danger" href="<?php echo "EliminarPersonas.php?id=" . $totem->id_persona?>">Eliminar</a></td>
 						</tr>
 					<?php } ?>

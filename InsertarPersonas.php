@@ -23,7 +23,7 @@ include_once "base_de_datos.php";
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
 $rut = $_POST["rut"];
-$rut = $_POST["rfid"];
+$rfid = $_POST["rfid"];
 
 /*
 Al incluir el archivo "base_de_datos.php", todas sus variables están

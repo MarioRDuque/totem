@@ -18,7 +18,7 @@ if (
     !isset($_POST["nombre"]) ||
     !isset($_POST["apellidos"]) ||
     !isset($_POST["rut"]) ||
-    !isset($_POST["rfid"])
+    !isset($_POST["rfid"]) 
 ) {
     exit();
 }
