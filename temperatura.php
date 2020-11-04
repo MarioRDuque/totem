@@ -1,6 +1,6 @@
 <?php
 
-$conexion = pg_connect("host=localhost port=5432 dbname=totem user=postgres password=root") or die('Error al conectar con la base de datos: ' . pg_last_error());
+$conexion = pg_connect("host=localhost port=5432 dbname=totem user=pi password=melli123") or die('Error al conectar con la base de datos: ' . pg_last_error());
 $query = "SELECT * FROM public.registros r INNER JOIN public.persona p ON p.id_persona = r.id_persona ORDER BY r.fecha DESC limit 1";
 
 $qu = pg_query($conexion, $query);
