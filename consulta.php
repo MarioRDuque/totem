@@ -7,13 +7,22 @@
   <script src="jquery.js" type="text/javascript"></script>
 </head>
 
-<body class="p-2" style="background-color: red;">
+<body class="p-2">
+  <?php
+  echo  "<p style='float: right;'> " . date("d/m/Y - H:i:s") . "</p>";
+  ?>
+  <br><br>
   <div class="">
     <img src="logo1.jpg" class="rounded mx-auto d-block" alt="...">
     <br>
-    <h2 class="text-center" id="nombre"></h2>
-    <div id="cuerpo"></div>
-  </div>
+    <h1 class="text-center">Exportar registros</h1>
+    <br>
+    <div class="text-center">
+      <input type="date" id="inicio">
+      <input type="date" id="fin">
+      <br><br><br>
+      <a class="btn btn-primary" href="excel.php">Exportar</a>
+    </div>
 </body>
 
 </html>
