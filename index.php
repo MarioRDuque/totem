@@ -4,37 +4,65 @@
 <head>
   <title>Totem</title>
   <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.js" type="text/javascript"></script>
+  <script src="bootstrap.min.js" type="text/javascript"></script>
 </head>
 
-<body>
-  <div>
+<body class="p-2">
+
+  <?php
+  echo  "<p style='float: right;'> " . date("d/m/Y - H:i:s") . "</p>";
+  ?>
+  <br><br>
+  <div class="">
     <img src="logo1.jpg" class="rounded mx-auto d-block" alt="...">
     <br>
-    <h2 class="text-center"><i>Bienvenido Bryan Joel Camacho Bermeo;</i></h2>
-    <br>
-    <h2 class="text-center"> <i>Su Temperatura es: 45° </i></h2>
+    <h2 class="text-center" id="nombre"></h2>
+    <div id="cuerpo"></div>
   </div>
+  <br>
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <div id="car1" class="carousel-item active">
+      <video autoplay src="video1.mp4" controls class="d-block w-100" alt="...">
+    </div>
+    <div id="car2" class="carousel-item">
+      <video src="video2.mp4" controls class="d-block w-100" alt="...">
+    </div>
+    <div id="car3" class="carousel-item">
+      <video src="video3.mp4" controls class="d-block w-100" alt="...">
+    </div>
+    <div id="car4" class="carousel-item">
+      <video src="video4.mp4" controls class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <br><br>
 </body>
-
+<br><br>
 </html>
 
-<?php
-$id_persona_anterior = null;
-$conexion = pg_connect("host=localhost port=5432 dbname=totem user=postgres password=root") or die('Error al conectar con la base de datos: ' . pg_last_error());
-$query = "SELECT * FROM public.registros r INNER JOIN public.persona p ON p.id_persona = r.id_persona limit 1";
-$result = pg_query($query);
-$arr = pg_fetch_all($result);
+<script>
+  $('#carousel').on('slid.bs.carousel', function(e) {
+    let elemento = $('#carousel .carousel-item.active video').first();
+    if (elemento.prop("tagName") == "VIDEO") {
+      elemento.get(0).play();
+    }
+  });
 
-if ($arr) {
-  $fileObjeto = json_decode(json_encode($arr, JSON_FORCE_OBJECT));
+  $('#carousel').bind('slide.bs.carousel', function(e) {
+    let elemento = $('#carousel .carousel-item.active video').first();
+    if (elemento.prop("tagName") == "VIDEO") {
+      elemento.get(0).pause();
+    }
+  });
 
-  echo "<pre>" . PHP_EOL;
-  var_dump($arr);
-  var_dump($fileObjeto);
-  echo "</pre>" . PHP_EOL;
-}
+  $('video').on('play', function(e) {
+    $("#carousel").carousel('pause');
+  });
+  $('video').on('stop pause ended', function(e) {
+    $("#carousel").carousel();
+  });
 
-print_r($arr);
-
-echo 'test2';
-?>
+  setInterval(function() {
+    $("#cuerpo").load("funciones.php");
+  }, 100);
+</script>
