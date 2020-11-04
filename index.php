@@ -87,8 +87,12 @@
   });
 
   setInterval(function() {
-    $("#cuerpo").load("funciones.php");
     $("#reloj").load("reloj.php");
-    $("#temperatura").load("temperatura.php");
   }, 300);
+  setInterval(function() {
+    $("#temperatura").load("temperatura.php");
+  }, 30000);
+  setInterval(function() {
+    $("#cuerpo").load("funciones.php");
+  }, 3000);
 </script>
