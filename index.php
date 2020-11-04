@@ -41,7 +41,7 @@
 </html>
 
 <script>
-  $('#carousel').on('slid.bs.carousel', function(e) {
+  $('#carousel').on('slide.bs.carousel', function(e) {
     let elemento = $('#carousel .carousel-item.active video').first();
     if (elemento.prop("tagName") == "VIDEO") {
       elemento.get(0).play();
