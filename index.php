@@ -24,7 +24,9 @@
 
   <div class="row">
     <div id="car1" class="carousel-item active">
-      <video autoplay src="video1.mp4" controls class="d-block w-100" alt="...">
+      <video id="mi-video" autoplay muted class="d-block w-100">
+        <source src="video4.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 
@@ -50,30 +52,43 @@
 </html>
 
 <script>
-  $('#carousel').on('slide.bs.carousel', function(e) {
-    let elemento = $('#carousel .carousel-item.active video').first();
-    if (elemento.prop("tagName") == "VIDEO") {
-      elemento.get(0).play();
-    }
-  });
+  $("#mi-video").on('ended', function() {
+    var $fuente = "";
+    var $videoFile = "";
 
-  $('#carousel').bind('slide.bs.carousel', function(e) {
-    let elemento = $('#carousel .carousel-item.active video').first();
-    if (elemento.prop("tagName") == "VIDEO") {
-      elemento.get(0).pause();
-    }
-  });
+    var video = $('#mi-video');
 
-  $('video').on('play', function(e) {
-    $("#carousel").carousel('pause');
-  });
-  $('video').on('stop pause ended', function(e) {
-    $("#carousel").carousel();
+    video.find('source').each(function() {
+      $fuente = $(this).attr('src');
+    });
+
+    switch ($fuente) {
+      case "video1.mp4":
+        $videoFile = "video2.mp4";
+        break;
+      case "video2.mp4":
+        $videoFile = "video3.mp4";
+        break;
+      case "video3.mp4":
+        $videoFile = "video4.mp4";
+        break;
+      case "video4.mp4":
+        $videoFile = "video1.mp4";
+        break;
+      default:
+        $videoFile = "video1.mp4";
+        break;
+    }
+
+    var $video = $('#mi-video'),
+      videoSrc = $('source', $video).attr('src', $videoFile);
+    $video[0].load();
+    $video[0].play();
   });
 
   setInterval(function() {
     $("#cuerpo").load("funciones.php");
     $("#reloj").load("reloj.php");
     $("#temperatura").load("temperatura.php");
-  }, 100);
+  }, 300);
 </script>
