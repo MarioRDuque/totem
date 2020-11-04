@@ -24,7 +24,9 @@
 
   <div class="row">
     <div id="car1" class="carousel-item active">
-      <video autoplay src="video1.mp4" controls class="d-block w-100" alt="...">
+      <video autoplay muted loop class="d-block w-100">
+        <source src="video4.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 
