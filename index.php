@@ -56,6 +56,8 @@
     var $fuente = "";
     var $videoFile = "";
 
+    var video = $('#mi-video');
+
     video.find('source').each(function() {
       $fuente = $(this).attr('src');
     });
@@ -83,7 +85,7 @@
     $video[0].load();
     $video[0].play();
   });
-  
+
   setInterval(function() {
     $("#cuerpo").load("funciones.php");
     $("#reloj").load("reloj.php");
