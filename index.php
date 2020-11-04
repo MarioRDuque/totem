@@ -9,35 +9,44 @@
 </head>
 
 <body class="p-2">
-
-  <?php
-  echo  "<p style='float: right;'> " . date("d/m/Y - H:i:s") . "</p>";
-  ?>
-  <br><br>
-  <div class="">
-    <img src="logo1.jpg" class="rounded mx-auto d-block" alt="...">
-    <br>
-    <h2 class="text-center" id="nombre"></h2>
-    <div id="cuerpo"></div>
+  <div class="row">
+    <div class="col-md-4">
+      <div id="temperatura"></div>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="logo1.jpg" class="img-fluid" alt="..."></div>
+    <div class="col-md-4">
+      <div id="reloj"></div>
+    </div>
   </div>
-  <br>
-  <div id="carousel" class="carousel slide" data-ride="carousel">
+
+  <br><br>
+
+  <div class="row">
     <div id="car1" class="carousel-item active">
       <video autoplay src="video1.mp4" controls class="d-block w-100" alt="...">
     </div>
-    <div id="car2" class="carousel-item">
-      <video src="video2.mp4" controls class="d-block w-100" alt="...">
+  </div>
+
+  <br><br>
+
+  <div class="">
+    <div id="cuerpo"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-4">
     </div>
-    <div id="car3" class="carousel-item">
-      <video src="video3.mp4" controls class="d-block w-100" alt="...">
-    </div>
-    <div id="car4" class="carousel-item">
-      <video src="video4.mp4" controls class="d-block w-100" alt="...">
+    <div class="col-md-4 text-center">
+      <img src="logo2.jpg" class="img-fluid" alt="..."></div>
+    <div class="col-md-4">
     </div>
   </div>
+
   <br><br>
 </body>
-<br><br>
+
 </html>
 
 <script>
@@ -64,5 +73,7 @@
 
   setInterval(function() {
     $("#cuerpo").load("funciones.php");
+    $("#reloj").load("reloj.php");
+    $("#temperatura").load("temperatura.php");
   }, 100);
 </script>
