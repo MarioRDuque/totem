@@ -3,8 +3,8 @@
 
 <head>
   <title>Consultas</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="jquery.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="utiles/bootstrap.min.css">
+  <script src="utiles/jquery.js" type="text/javascript"></script>
 </head>
 <?php include_once "encabezado.php" ?>
 <br>

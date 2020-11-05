@@ -7,8 +7,7 @@
     <meta name="description" content="Conexión de PHP con PostgreSQL usando PDO">
     <meta name="author" content="Parzibyte">
     <title>TOTEM</title>
-    <link href="./bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="utiles/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>

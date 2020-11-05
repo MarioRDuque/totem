@@ -3,10 +3,11 @@
 
 <head>
   <title>Totem</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="jquery.js" type="text/javascript"></script>
-  <script src="bootstrap.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="utiles/bootstrap.min.css">
+  <script src="utiles/jquery.js" type="text/javascript"></script>
+  <script src="utiles/bootstrap.min.js" type="text/javascript"></script>
 </head>
+
 <body class="p-2">
   <div class="row m-0">
     <div class="col-md-4">
@@ -16,7 +17,7 @@
       </div>
     </div>
     <div class="col-md-4 text-center">
-      <img src="logo1.jpg" class="img-fluid" alt="..."></div>
+      <img src="utiles/logo1.jpg" class="img-fluid" alt="..."></div>
     <div class="col-md-4">
       <div id="reloj"></div>
     </div>
@@ -27,7 +28,7 @@
   <div class="row m-0">
     <div id="car1" class="carousel-item active" style="border: 0;">
       <video id="mi-video" autoplay muted class="d-block w-100" style="border: 0;">
-        <source src="video1.mp4" type="video/mp4">
+        <source src="utiles/video1.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -43,7 +44,7 @@
     <div class="col-md-4">
     </div>
     <div class="col-md-4 text-center">
-      <img src="logo2.jpg" class="img-fluid" alt="..."></div>
+      <img src="utiles/logo2.jpg" class="img-fluid" alt="..."></div>
     <div class="col-md-4">
     </div>
   </div>
@@ -65,20 +66,20 @@
     });
 
     switch ($fuente) {
-      case "video1.mp4":
-        $videoFile = "video2.mp4";
+      case "utiles/video1.mp4":
+        $videoFile = "utiles/video2.mp4";
         break;
-      case "video2.mp4":
-        $videoFile = "video3.mp4";
+      case "utiles/video2.mp4":
+        $videoFile = "utiles/video3.mp4";
         break;
-      case "video3.mp4":
-        $videoFile = "video4.mp4";
+      case "utiles/video3.mp4":
+        $videoFile = "utiles/video4.mp4";
         break;
-      case "video4.mp4":
-        $videoFile = "video1.mp4";
+      case "utiles/video4.mp4":
+        $videoFile = "utiles/video1.mp4";
         break;
       default:
-        $videoFile = "video1.mp4";
+        $videoFile = "utiles/video1.mp4";
         break;
     }
 

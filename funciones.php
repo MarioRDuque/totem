@@ -1,6 +1,6 @@
 <?php
 
-include_once "base_de_datos.php";
+include_once "utiles/base_de_datos.php";
 
 $id_persona_anterior = null;
 $entroAlguien = false;

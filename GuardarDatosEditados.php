@@ -14,7 +14,7 @@ if (
 }
 
 
-include_once "base_de_datos.php";
+include_once "utiles/base_de_datos.php";
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];

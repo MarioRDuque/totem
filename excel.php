@@ -1,6 +1,6 @@
 <?php
 
-include_once "base_de_datos.php";
+include_once "utiles/base_de_datos.php";
 
 header('Content-type:application/xls');
 header('Content-Disposition: attachment; filename=registros.xls');
