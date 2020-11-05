@@ -37,10 +37,15 @@ if (!$persona) {
 #Si la persona existe, se ejecuta esta parte del código
 ?>
 <body class="p-5">
+<?php include_once "encabezado.php" ?>
+<br>
+<br>
+<br>
 
 <div class="row">
 	
 		<h1>Editar Persona</h1>
+		<br>
 		<br>
 		<br>
 		<div class="col-12">
