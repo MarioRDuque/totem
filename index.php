@@ -9,9 +9,12 @@
 </head>
 
 <body class="p-2">
-  <div class="row">
+  <div class="row m-0">
     <div class="col-md-4">
-      <div id="temperatura"></div>
+      <div>
+        <br><br>
+        <h2 class='text-center' style='font-size: 20px' id="tambiente"> </h2>
+      </div>
     </div>
     <div class="col-md-4 text-center">
       <img src="logo1.jpg" class="img-fluid" alt="..."></div>
@@ -22,9 +25,9 @@
 
   <br><br>
 
-  <div class="row">
-    <div id="car1" class="carousel-item active">
-      <video id="mi-video" autoplay muted class="d-block w-100">
+  <div class="row m-0">
+    <div id="car1" class="carousel-item active" style="border: 0;">
+      <video id="mi-video" autoplay muted class="d-block w-100" style="border: 0;">
         <source src="video4.mp4" type="video/mp4">
       </video>
     </div>
@@ -37,7 +40,7 @@
   </div>
   <br>
 
-  <div class="row">
+  <div class="row m-0">
     <div class="col-md-4">
     </div>
     <div class="col-md-4 text-center">
@@ -89,9 +92,6 @@
   setInterval(function() {
     $("#reloj").load("reloj.php");
   }, 300);
-  setInterval(function() {
-    $("#temperatura").load("temperatura.php");
-  }, 30000);
   setInterval(function() {
     $("#cuerpo").load("funciones.php");
   }, 3000);

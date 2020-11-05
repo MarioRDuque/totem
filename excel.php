@@ -1,12 +1,24 @@
 <?php
+
+include_once "base_de_datos.php";
+
 header('Content-type:application/xls');
 header('Content-Disposition: attachment; filename=registros.xls');
 
-$inicio = "<script>document.getElementById('inicio').value</script>";
-$fin = "<script>document.getElementById('fin').value</script>";
+if (
+  !isset($_POST["inicio"]) ||
+  !isset($_POST["fin"])
+) {
+  exit();
+}
 
-$conexion = pg_connect("host=localhost port=5432 dbname=totem user=postgres password=root") or die('Error al conectar con la base de datos: ' . pg_last_error());
-$query = "SELECT * FROM public.registros r INNER JOIN public.persona p ON p.id_persona = r.id_persona";
+$inicio = $_POST["inicio"];
+$fin = $_POST["fin"];
+
+$conexion = pg_connect("host=" . $rutaServidor . " port=" . $puerto . " dbname=" . $nombreBaseDeDatos . " user=" . $usuario . " password=" . $clave . "") or die('Error al conectar con la base de datos: ' . pg_last_error());
+$query = "SELECT * FROM public.registros r LEFT JOIN public.persona p ON p.rfid = r.rfid WHERE fecha >= '$inicio' AND fecha <= '$fin';";
+
+echo $query;
 
 $result = pg_Exec($conexion, $query);
 
