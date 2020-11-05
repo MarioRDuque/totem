@@ -36,30 +36,49 @@ if (!$persona) {
 
 #Si la persona existe, se ejecuta esta parte del código
 ?>
+<body class="p-5">
+<?php include_once "encabezado.php" ?>
+<br>
+<br>
+<br>
+
 <div class="row">
-	<div class="col-12">
-		<h1>Editar</h1>
+	
+		<h1>Editar Persona</h1>
+		<br>
+		<br>
+		<br>
+		<div class="col-12">
 		<form action="guardarDatosEditados.php" method="POST">
 			<input type="hidden" name="id" value="<?php echo $persona->id_persona; ?>">
+			<div class="col-3">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
 				<input value="<?php echo $persona->nombre; ?>" required name="nombre" type="text" id="nombre" placeholder="Nombre de persona" class="form-control">
 			</div>
+			</div>
+			<div class="col-3">
 			<div class="form-group">
 				<label for="apellidos">Apellidos</label>
 				<input value="<?php echo $persona->apellidos; ?>" required name="apellidos" type="text" id="apellidos" placeholder="Apellidos de la persona" class="form-control">
 			</div>
+			</div>
+			<div class="col-3">
 			<div class="form-group">
 				<label for="rut">RUT</label>
 				<input value="<?php echo $persona->rut; ?>" required name="rut" type="text" id="rut" placeholder="RUT de persona" class="form-control">
 			</div>
+			</div>
+			<div class="col-3">
 			<div class="form-group">
 				<label for="rfid">RFID</label>
 				<input value="<?php echo $persona->rfid; ?>" required name="rfid" type="text" id="rfid" placeholder="RFID de persona" class="form-control">
+			</div>
 			</div>
 			<button type="submit" class="btn btn-success">Guardar</button>
 			<a href="./ListarPersonas.php" class="btn btn-warning">Volver</a>
 		</form>
 	</div>
 </div>
+</body>
 </html>

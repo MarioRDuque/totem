@@ -6,7 +6,10 @@
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquery.js" type="text/javascript"></script>
 </head>
-
+<?php include_once "encabezado.php" ?>
+<br>
+<br>
+<br>
 <?php
 $inicio = "";
 $fin = "";
@@ -14,12 +17,8 @@ $fin = "";
 
 
 <body class="p-2">
-  <?php
-  echo  "<p style='float: right;'> " . date("d/m/Y - H:i:s") . "</p>";
-  ?>
   <br><br>
   <div class="container">
-    <img src="logo1.jpg" class="rounded mx-auto d-block" alt="...">
     <br>
     <h1 class="text-center">Exportar registros</h1>
     <br>

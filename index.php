@@ -7,7 +7,6 @@
   <script src="jquery.js" type="text/javascript"></script>
   <script src="bootstrap.min.js" type="text/javascript"></script>
 </head>
-
 <body class="p-2">
   <div class="row m-0">
     <div class="col-md-4">

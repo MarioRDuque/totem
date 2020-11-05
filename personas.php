@@ -6,8 +6,15 @@
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquery.js" type="text/javascript"></script>
 </head>
+<?php include_once "encabezado.php" ?>
 <br>
-<img src="logo1.jpg" class="rounded mx-auto d-block" alt="...">
+<br>
+<br>
+<br>
+<br>
+<div class="text-center">
+<h1>Registrar Persona</h1>
+</div>
 <br>
 		<form action="InsertarPersonas.php" method="POST">
         <div class="form-row">

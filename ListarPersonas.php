@@ -28,17 +28,21 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
 <br><br>
+<?php include_once "encabezado.php" ?>
+<br>
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
 			<h1>Lista De Personas</h1>
 		</div>
+		<br>
 		<div class="col-md-3 text-right">
 			<a class="btn btn-primary" href="<?php echo "personas.php" ?>">Nuevo</a>
 		</div>
 		<!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
-
 		<br>
+		<br>
+		<body class="p-2">
 		<div class="table-responsive">
 			<table class="table table-bordered">
 				<thead class="thead-dark">
@@ -71,6 +75,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 				</tbody>
 			</table>
 		</div>
+		</body>
 	</div>
 </div>
 </html>
