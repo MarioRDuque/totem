@@ -40,13 +40,13 @@ if (!$persona) {
 			<div class="col-3">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
-				<input value="<?php echo $persona->nombre; ?>" required name="nombre" type="text" id="nombre" placeholder="Nombre de persona" class="form-control">
+				<input value="<?php echo $persona->nombre; ?>" required name="nombre" class="form-control text-uppercase" id="nombre" placeholder="Nombre de persona" >
 			</div>
 			</div>
 			<div class="col-3">
 			<div class="form-group">
 				<label for="apellidos">Apellidos</label>
-				<input value="<?php echo $persona->apellidos; ?>" required name="apellidos" type="text" id="apellidos" placeholder="Apellidos de la persona" class="form-control">
+				<input value="<?php echo $persona->apellidos; ?>" required name="apellidos" class="form-control text-uppercase" id="apellidos" placeholder="Apellidos de la persona">
 			</div>
 			</div>
 			<div class="col-3">
@@ -57,13 +57,13 @@ if (!$persona) {
 			<div class="col-3">
 			<div class="form-group">
 				<label for="rut">RUT</label>
-				<input value="<?php echo $persona->rut; ?>" required name="rut" type="text" id="rut" placeholder="RUT de persona" class="form-control">
+				<input value="<?php echo $persona->rut; ?>" required name="rut" class="form-control text-uppercase" id="rut" placeholder="RUT de persona">
 			</div>
 			</div>
 			<div class="col-3">
 			<div class="form-group">
 				<label for="rfid">RFID</label>
-				<input value="<?php echo $persona->rfid; ?>" required name="rfid" type="text" id="rfid" placeholder="RFID de persona" class="form-control">
+				<input value="<?php echo $persona->rfid; ?>" required name="rfid" class="form-control text-uppercase" id="rfid" placeholder="RFID de persona">
 			</div>
 			</div>
 			<div class="col-3"></div>

@@ -15,7 +15,9 @@ $rut = $_POST["rut"];
 $rfid = $_POST["rfid"];
 
 $sentencia = $base_de_datos->prepare("INSERT INTO persona(nombre, apellidos, rut, rfid) VALUES (?, ?, ?, ?);");
-$resultado = $sentencia->execute([$nombre, $apellidos, $rut, $rfid]);
+$resultado = $sentencia->execute([strtoupper($nombre), strtoupper($apellidos), strtoupper($rut), strtoupper($rfid)]);
+
+
 
  if ($resultado === true) {
     header("Location: ListarPersonas.php");
