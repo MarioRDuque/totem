@@ -95,4 +95,7 @@
   setInterval(function() {
     $("#cuerpo").load("funciones.php");
   }, 3000);
+  setInterval(function() {
+    location.reload();
+  }, 900000);
 </script>
