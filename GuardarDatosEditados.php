@@ -22,7 +22,7 @@ $rut = $_POST["rut"];
 $rfid = $_POST["rfid"];
 
 $sentencia = $base_de_datos->prepare("UPDATE persona SET nombre = ?, apellidos = ?, rut = ?, rfid = ? WHERE id_persona = ?;");
-$resultado = $sentencia->execute([$nombre, $apellidos, $rut, $rfid, $id]);
+$resultado = $sentencia->execute([strtoupper($nombre), strtoupper($apellidos), strtoupper($rut), strtoupper($rfid)]);
 if ($resultado === true) {
     header("Location: ListarPersonas.php");
 } else {
