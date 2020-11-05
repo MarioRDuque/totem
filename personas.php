@@ -22,13 +22,13 @@
         <div class="col-3">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input required name="nombre" type="text" id="nombre" placeholder="Nombre de la persona" class="form-control">
+                <input required name="nombre" class="form-control text-uppercase" id="nombre" placeholder="Nombre de la persona">
             </div>
         </div>
         <div class="col-3">
             <div class="form-group">
                 <label for="apellidos">Apellido</label>
-                <input required name="apellidos" type="text" id="apellidos" placeholder="Apellido de la persona" class="form-control">
+                <input required name="apellidos" class="form-control text-uppercase" id="apellidos" placeholder="Apellido de la persona">
             </div>
         </div>
         <div class="col-3"></div>
@@ -38,13 +38,13 @@
         <div class="col-3">
             <div class="form-group">
                 <label for="rut">RUT</label>
-                <input required name="rut" type="text" id="rut" placeholder="RUT de la persona" class="form-control">
+                <input required name="rut" class="form-control text-uppercase" id="rut" placeholder="RUT de la persona">
             </div>
         </div>
         <div class="col-3">
             <div class="form-group">
                 <label for="rfid">RFID</label>
-                <input required name="rfid" type="text" id="rfid" placeholder="RFID de la persona" class="form-control">
+                <input required name="rfid" class="form-control text-uppercase" id="rfid" placeholder="RFID de la persona">
             </div>
         </div>
         <div class="col-3"></div>
