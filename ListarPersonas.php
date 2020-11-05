@@ -2,10 +2,10 @@
 <html>
 
 <head>
-  <title>Lista De Personas</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="jquery.js" type="text/javascript"></script>
-  <script src="bootstrap.min.js" type="text/javascript"></script>
+	<title>Lista De Personas</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="bootstrap.min.js" type="text/javascript"></script>
 </head>
 
 <?php
@@ -27,11 +27,17 @@ $sentencia = $base_de_datos->query("select * from persona");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
-<div class="row">
-<!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
-<div class="col-1"></div>
-    <div class="col-10">
-		<h1>Lista De Personas</h1>
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<h1>Lista De Personas</h1>
+		</div>
+		<div class="col-md-3 text-right">
+			<a class="btn btn-primary" href="<?php echo "personas.php" ?>">Nuevo</a>
+		</div>
+		<!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
+
 		<br>
 		<div class="table-responsive">
 			<table class="table table-bordered">
@@ -51,22 +57,46 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 					Atención aquí, sólo esto cambiará
 					Pd: no ignores las llaves de inicio y cierre {}
 					-->
-					<?php foreach($personas as $totem){ ?>
+					<?php foreach ($personas as $totem) { ?>
 						<tr>
 							<td><?php echo $totem->id_persona ?></td>
 							<td><?php echo $totem->nombre ?></td>
 							<td><?php echo $totem->apellidos ?></td>
 							<td><?php echo $totem->rut ?></td>
 							<td><?php echo $totem->rfid ?></td>
-							<td><a class="btn btn-success" href="<?php echo "EditarPersonas.php?id=" . $totem->id_persona?>">Editar</a></td>
-							<td><a class="btn btn-danger" href="<?php echo "EliminarPersonas.php?id=" . $totem->id_persona?>">Eliminar</a></td>
+							<td><a class="btn btn-success" href="<?php echo "EditarPersonas.php?id=" . $totem->id_persona ?>">Editar</a></td>
+							<td><a class="btn btn-danger" href="<?php echo "EliminarPersonas.php?id=" . $totem->id_persona ?>">Eliminar</a></td>
 						</tr>
 					<?php } ?>
 				</tbody>
 			</table>
-            <div class="col-1"></div>
 		</div>
 	</div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea eliminar? </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </html>

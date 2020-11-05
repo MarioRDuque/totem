@@ -32,13 +32,13 @@
             <div class="col-3">
 			<div class="form-group">
 				<label for="rut">RUT</label>
-				<input required name="rut" type="number" id="rut" placeholder="RUT de la persona" class="form-control">
+				<input required name="rut" type="text" id="rut" placeholder="RUT de la persona" class="form-control">
 			</div>
             </div>
             <div class="col-3">
 			<div class="form-group">
 				<label for="rfid">RFID</label>
-				<input required name="rfid" type="number" id="rfid" placeholder="RFID de la persona" class="form-control">
+				<input required name="rfid" type="text" id="rfid" placeholder="RFID de la persona" class="form-control">
             </div>
             </div>
             <div class="col-3"></div>

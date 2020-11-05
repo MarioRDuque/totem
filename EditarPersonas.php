@@ -51,11 +51,11 @@ if (!$persona) {
 			</div>
 			<div class="form-group">
 				<label for="rut">RUT</label>
-				<input value="<?php echo $persona->rut; ?>" required name="rut" type="number" id="rut" placeholder="RUT de persona" class="form-control">
+				<input value="<?php echo $persona->rut; ?>" required name="rut" type="text" id="rut" placeholder="RUT de persona" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="rfid">RFID</label>
-				<input value="<?php echo $persona->rfid; ?>" required name="rfid" type="number" id="rfid" placeholder="RFID de persona" class="form-control">
+				<input value="<?php echo $persona->rfid; ?>" required name="rfid" type="text" id="rfid" placeholder="RFID de persona" class="form-control">
 			</div>
 			<button type="submit" class="btn btn-success">Guardar</button>
 			<a href="./ListarPersonas.php" class="btn btn-warning">Volver</a>
