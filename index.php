@@ -13,7 +13,7 @@
     <div class="col-md-4">
       <div>
         <br><br>
-        <h2 class='text-center' style='font-size: 20px' id="tambiente"> </h2>
+        <h3 class='text-center' style='font-size: 40px' id="tambiente"> </h3>
       </div>
     </div>
     <div class="col-md-4 text-center">
