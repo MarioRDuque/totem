@@ -7,18 +7,12 @@
   <script src="jquery.js" type="text/javascript"></script>
   <script src="bootstrap.min.js" type="text/javascript"></script>
 </head>
+<body class="p-5">
+<?php include_once "encabezado.php" ?>
+<br>
+<br>
+<br>
 <?php
-/*
-CRUD con PostgreSQL y PHP
-@author parzibyte [parzibyte.me/blog]
-@date 2019-06-17
-
-================================
-Este archivo muestra un formulario llenado automáticamente
-(a partir del ID pasado por la URL) para editar
-================================
- */
-
 if (!isset($_GET["id"])) {
     exit();
 }
@@ -29,28 +23,20 @@ $sentencia = $base_de_datos->prepare("select * from persona where id_persona = ?
 $sentencia->execute([$id]);
 $persona = $sentencia->fetchObject();
 if (!$persona) {
-    #No existe
     echo "¡No existe alguna persona con ese ID!";
     exit();
 }
-
-#Si la persona existe, se ejecuta esta parte del código
 ?>
-<body class="p-5">
-<?php include_once "encabezado.php" ?>
-<br>
-<br>
-<br>
-
-<div class="row">
-	
+		<div class="text-center">
 		<h1>Editar Persona</h1>
+		</div>
 		<br>
 		<br>
 		<br>
-		<div class="col-12">
 		<form action="guardarDatosEditados.php" method="POST">
 			<input type="hidden" name="id" value="<?php echo $persona->id_persona; ?>">
+			<div class="form-row">
+			<div class="col-3"></div>
 			<div class="col-3">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
@@ -64,6 +50,11 @@ if (!$persona) {
 			</div>
 			</div>
 			<div class="col-3">
+			</div>
+			</div>
+			<div class="form-row">
+			<div class="col-3"></div>
+			<div class="col-3">
 			<div class="form-group">
 				<label for="rut">RUT</label>
 				<input value="<?php echo $persona->rut; ?>" required name="rut" type="text" id="rut" placeholder="RUT de persona" class="form-control">
@@ -75,10 +66,12 @@ if (!$persona) {
 				<input value="<?php echo $persona->rfid; ?>" required name="rfid" type="text" id="rfid" placeholder="RFID de persona" class="form-control">
 			</div>
 			</div>
+			<div class="col-3"></div>
+			</div>
+			<div class="text-center">
 			<button type="submit" class="btn btn-success">Guardar</button>
 			<a href="./ListarPersonas.php" class="btn btn-warning">Volver</a>
+			</div>
 		</form>
-	</div>
-</div>
 </body>
 </html>

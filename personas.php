@@ -33,7 +33,6 @@
             </div>
             <div class="col-3"></div>
             </div>
-            </div>
             <div class="form-row">
             <div class="col-3"></div>
             <div class="col-3">

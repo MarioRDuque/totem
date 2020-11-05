@@ -38,5 +38,4 @@ if ($data != null && $data->id_persona != null) {
   }
 }
 
-/* Cierra la conexion con la base de datos */
 pg_close($conexion);
