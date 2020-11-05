@@ -7,28 +7,17 @@
 	<script src="jquery.js" type="text/javascript"></script>
 	<script src="bootstrap.min.js" type="text/javascript"></script>
 </head>
-
+<?php include_once "encabezado.php" ?>
+<br><br>
 <?php
-/*
-CRUD con PostgreSQL y PHP
-@author parzibyte [parzibyte.me/blog]
-@date 2019-06-17
 
-================================
-Este archivo lista todos los
-datos de la tabla, obteniendo a
-los mismos como un arreglo
-================================
-*/
 ?>
 <?php
 include_once "base_de_datos.php";
 $sentencia = $base_de_datos->query("select * from persona");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
-<!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
-<br><br>
-<?php include_once "encabezado.php" ?>
+<br>
 <br>
 <div class="container">
 	<div class="row">
@@ -39,7 +28,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		<div class="col-md-3 text-right">
 			<a class="btn btn-primary" href="<?php echo "personas.php" ?>">Nuevo</a>
 		</div>
-		<!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
+		
 		<br>
 		<br>
 		<body class="p-2">
@@ -57,10 +46,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 					</tr>
 				</thead>
 				<tbody>
-					<!--
-					Atención aquí, sólo esto cambiará
-					Pd: no ignores las llaves de inicio y cierre {}
-					-->
+					<br>
 					<?php foreach ($personas as $totem) { ?>
 						<tr>
 							<td><?php echo $totem->id_persona ?></td>

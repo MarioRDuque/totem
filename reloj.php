@@ -28,7 +28,7 @@ switch ($dia) {
     $dia = 'Domingo';
     break;
   default:
-    # code...
+    
     break;
 }
 
@@ -72,7 +72,7 @@ switch ($mes) {
     $mes = 'Diciembre';
     break;
   default:
-    # code...
+    
     break;
 }
 
