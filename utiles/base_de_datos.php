@@ -1,6 +1,6 @@
 <?php
-$clave = "root";
-$usuario = "postgres";
+$clave = "melli123";
+$usuario = "pi";
 $nombreBaseDeDatos = "totem";
 $rutaServidor = "localhost";
 $puerto = "5432";
