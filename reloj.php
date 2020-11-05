@@ -9,13 +9,13 @@ switch ($dia) {
   case 'Mon':
     $dia = 'Lunes';
     break;
-  case 'Tues':
+  case 'Tue':
     $dia = 'Martes';
     break;
   case 'Wed':
     $dia = 'Miércoles';
     break;
-  case 'Thurs':
+  case 'Thu':
     $dia = 'Jueves';
     break;
   case 'Fri':
