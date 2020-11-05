@@ -33,7 +33,7 @@ if (!$persona) {
 		<br>
 		<br>
 		<br>
-		<form action="guardarDatosEditados.php" method="POST">
+		<form action="GuardarDatosEditados.php" method="POST">
 			<input type="hidden" name="id" value="<?php echo $persona->id_persona; ?>">
 			<div class="form-row">
 			<div class="col-3"></div>
