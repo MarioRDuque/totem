@@ -19,18 +19,23 @@ if ($data && $data->id_registro == $id_registro_anterior) {
   $id_registro_anterior = $data->id_registro;
 }
 
+//cero es ok
+//4 registra pero hubo timeout
+//despues de 10 segundos se borra si no llego nadie
+
+
 if ($data != null && $data->id_persona != null && $entroAlguien) {
-  echo "<h2 class='text-center'><i>Bienvenido " . $data->nombre . " " . $data->apellidos . ";</i></h2>  <br>";
-  echo "<h2 class='text-center'> <i>Su Temperatura es: " . $data->temperatura . " </i></h2>";
+  echo "<h2 class='text-center'>Bienvenido " . $data->nombre . " " . $data->apellidos . ";</h2>  <br>";
+  echo "<h2 class='text-center'> Su Temperatura es: " . $data->temperatura . " °C</h2>";
   echo "
             <script type=\"text/javascript\">
-            document.getElementById('tambiente').innerHTML='Temperatura:  $data->tambiente  ';
+            document.getElementById('tambiente').innerHTML=' $data->tambiente  °C';
             </script>
         ";
 } else {
   if ($data != null && $data->id_registro != null && $entroAlguien) {
-    echo "<h2 class='text-center'><i>Bienvenido NN; por favor debe enrolar su pulsera.</i></h2>  <br>";
-    echo "<h2 class='text-center'> <i>Su Temperatura es: XXX </i></h2>";
+    echo "<h2 class='text-center'>Bienvenido NN; por favor debe enrolar su pulsera.</h2>  <br>";
+    echo "<h2 class='text-center'> Su Temperatura es: XXX °C</h2>";
     echo "
               <script type=\"text/javascript\">
               document.getElementById('tambiente').innerHTML=' $data->tambiente °C';

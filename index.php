@@ -91,10 +91,8 @@
 
   setInterval(function() {
     $("#reloj").load("reloj.php");
-  }, 300);
-  setInterval(function() {
     $("#cuerpo").load("funciones.php");
-  }, 3000);
+  }, 300);
   setInterval(function() {
     location.reload();
   }, 900000);
