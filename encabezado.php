@@ -26,10 +26,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./personas.php">Agregar</a>
                 </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.php">Salir</a>
+                </li>
             </ul>
         </div>
         <div class="text-rigth">
-            <img src="utiles/logo1.jpg" width="100" height="75">
+            <img src="utiles/logo1.jpg" class="rounded" width="100" height="75">
         </div>
         </div>
     </nav>
