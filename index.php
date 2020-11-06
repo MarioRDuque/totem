@@ -115,5 +115,5 @@
   }, 300);
   setInterval(function() {
     location.reload();
-  }, 900000);
+  }, 600000);
 </script>
