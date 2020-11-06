@@ -10,7 +10,7 @@
 
 <body class="p-2">
   <br>
-  
+
   <div class="row m-0">
     <div class="col-md-4">
       <div>
@@ -77,36 +77,29 @@
 <script>
   $("#mi-video").on('ended', function() {
     var $fuente = "";
-    var $videoFile = "";
-
-    var video = $('#mi-video');
-
-    video.find('source').each(function() {
+    $('#mi-video').find('source').each(function() {
       $fuente = $(this).attr('src');
     });
 
     switch ($fuente) {
       case "utiles/video1.mp4":
-        $videoFile = "utiles/video2.mp4";
+        $('source', $('#mi-video')).attr('src', "utiles/video2.mp4");
         break;
       case "utiles/video2.mp4":
-        $videoFile = "utiles/video3.mp4";
+        $('source', $('#mi-video')).attr('src', "utiles/video3.mp4");
         break;
       case "utiles/video3.mp4":
-        $videoFile = "utiles/video4.mp4";
+        $('source', $('#mi-video')).attr('src', "utiles/video4.mp4");
         break;
       case "utiles/video4.mp4":
-        $videoFile = "utiles/video1.mp4";
+        $('source', $('#mi-video')).attr('src', "utiles/video1.mp4");
         break;
       default:
-        $videoFile = "utiles/video1.mp4";
+        $('source', $('#mi-video')).attr('src', "utiles/video1.mp4");
         break;
     }
-
-    var $video = $('#mi-video'),
-      videoSrc = $('source', $video).attr('src', $videoFile);
-    $video[0].load();
-    $video[0].play();
+    $('#mi-video')[0].load();
+    $('#mi-video')[0].play();
   });
 
   setInterval(function() {
