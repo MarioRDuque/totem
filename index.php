@@ -20,6 +20,7 @@
     </div>
     <div class="col-md-4 text-center">
       <img src="utiles/logo1.jpg" class="img-fluid" alt="..."></div>
+    <input type="text" id="idRegistro" hidden>
     <div class="col-md-4">
       <div id="reloj"></div>
     </div>
@@ -42,7 +43,7 @@
   </div>
   <br>
 
-  <div class="row m-0">
+  <div class="row m-0" id="aviso" hidden>
     <div class="col-md-4">
     </div>
     <div class="col-md-4 text-center">
@@ -103,8 +104,13 @@
   });
 
   setInterval(function() {
+    var idRegistro = document.getElementById("idRegistro").value;
+    var cuerpo = document.getElementById("cuerpo").innerHTML;
     $("#reloj").load("reloj.php");
-    $("#cuerpo").load("funciones.php");
+    $("#cuerpo").load("funciones.php", {
+      'idRegistro': idRegistro,
+      'cuerpo': cuerpo
+    });
   }, 300);
   setInterval(function() {
     location.reload();
