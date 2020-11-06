@@ -27,8 +27,8 @@
         </div>
         <div class="col-3">
             <div class="form-group">
-                <label for="apellidos">Apellido</label>
-                <input required name="apellidos" class="form-control text-uppercase" id="apellidos" placeholder="Apellido de la persona">
+                <label for="apellidos">Apellidos</label>
+                <input required name="apellidos" class="form-control text-uppercase" id="apellidos" placeholder="Apellidos de la persona">
             </div>
         </div>
         <div class="col-3"></div>
