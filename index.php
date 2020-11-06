@@ -9,6 +9,8 @@
 </head>
 
 <body class="p-2">
+  <br>
+  
   <div class="row m-0">
     <div class="col-md-4">
       <div>
@@ -38,6 +40,24 @@
   <div class="">
     <div id="cuerpo"></div>
   </div>
+  <br>
+
+  <div class="row m-0">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 text-center">
+      <ul>
+        <li>1. Registra tu asistencia</li>
+        <li>2. Checkea tu temperatura</li>
+        <li>3. Desinfecta tus manos</li>
+      </ul>
+      ... Todo sin contacto
+      <h5>#cuidemonosentretodos</h5>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+
   <br>
 
   <div class="row m-0">
