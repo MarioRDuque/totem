@@ -10,7 +10,7 @@
     <link href="utiles/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="p-3">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="nav-link" href="./admin.php">
             <h2> TOTEM </h2>
@@ -27,6 +27,10 @@
                     <a class="nav-link" href="./personas.php">Agregar</a>
                 </li>
             </ul>
+        </div>
+        <div class="text-rigth">
+            <img src="utiles/logo1.jpg" width="100" height="75">
+        </div>
         </div>
     </nav>
     <main role="main" class="container">
