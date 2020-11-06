@@ -19,7 +19,7 @@ $data2 = pg_fetch_object($qu2);
 
 if ($data) {
 
-  date_default_timezone_set('America/Lima');
+  date_default_timezone_set('America/Santiago');
   setlocale(LC_ALL, 'es_CH');
 
   $f1 = date("Y-m-d H:i:s");
