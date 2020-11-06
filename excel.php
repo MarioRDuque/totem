@@ -18,11 +18,7 @@ $fin = $_POST["fin"];
 $conexion = pg_connect("host=" . $rutaServidor . " port=" . $puerto . " dbname=" . $nombreBaseDeDatos . " user=" . $usuario . " password=" . $clave . "") or die('Error al conectar con la base de datos: ' . pg_last_error());
 $query = "SELECT * FROM public.registros r LEFT JOIN public.persona p ON p.rfid = r.rfid WHERE fecha >= '$inicio' AND fecha <= '$fin';";
 
-echo $query;
-
 $result = pg_Exec($conexion, $query);
-
-$data = pg_fetch_assoc($result);
 
 $isPrintHeader = false;
 
