@@ -2,9 +2,6 @@
 <html lang="es">
 
 <?php include_once "encabezado.php" ?>
-<br>
-<br>
-<br>
 <?php
 $fecha = date("Y-m-d H:i:s");
 $hora = "";
@@ -17,7 +14,6 @@ $f1 = date("Y-m-d H:i:s");
 
 
 <body>
-  <br><br>
   <div class="container">
     <br>
     <h1 class="text-center">Ajuste Reloj</h1>
