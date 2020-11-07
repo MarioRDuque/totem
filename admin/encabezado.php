@@ -41,6 +41,9 @@
                     <a class="nav-link" href="./reiniciar.php">Reiniciar</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="./recargar.php">Recargar</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="./apagar.php">Apagar</a>
                 </li>
                 </li>
