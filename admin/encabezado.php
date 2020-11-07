@@ -23,6 +23,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto text-center">
                 <li class="nav-item">
+                    <a class="nav-link" href="./carga-masiva.php">Importar</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="./consulta.php">Exportar</a>
                 </li>
                 <li class="nav-item">
