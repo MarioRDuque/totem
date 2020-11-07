@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<title>Lista De Personas</title>
-	<link rel="stylesheet" href="utiles/bootstrap.min.css">
-	<script src="utiles/jquery.js" type="text/javascript"></script>
-	<script src="utiles/bootstrap.min.js" type="text/javascript"></script>
-</head>
 <?php include_once "encabezado.php" ?>
 <br><br><br>
 <?php
 
 ?>
 <?php
-include_once "utiles/base_de_datos.php";
+include_once "../utiles/base_de_datos.php";
 $sentencia = $base_de_datos->query("select * from persona");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
@@ -31,7 +25,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		<br>
 		<br>
 
-		<body class="p-2">
+		<body>
 			<div class="table-responsive">
 				<table class="table table-bordered">
 					<thead class="thead-dark">
@@ -65,5 +59,5 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 	</div>
 </div>
 <br><br><br>
-<?php include_once "pie.php" ?>
+<?php include_once "../pie.php" ?>
 </html>

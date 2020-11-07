@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Consultas</title>
-  <link rel="stylesheet" href="utiles/bootstrap.min.css">
-  <script src="utiles/jquery.js" type="text/javascript"></script>
-</head>
 <?php include_once "encabezado.php" ?>
 <br>
 <?php
@@ -14,7 +9,7 @@ $fin = "";
 ?>
 
 
-<body class="p-2">
+<body>
   <br><br>
   <div class="container">
     <br>
@@ -33,5 +28,5 @@ $fin = "";
     </form>
 </body>
 <br><br><br>
-<?php include_once "pie.php" ?>
+<?php include_once "../pie.php" ?>
 </html>

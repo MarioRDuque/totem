@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Totem</title>
-  <link rel="stylesheet" href="utiles/bootstrap.min.css">
-  <script src="utiles/jquery.js" type="text/javascript"></script>
-  <script src="utiles/bootstrap.min.js" type="text/javascript"></script>
-</head>
-<body class="p-5">
+<body>
 <?php include_once "encabezado.php" ?>
 <br>
 <br>
@@ -18,7 +12,7 @@ if (!isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-include_once "utiles/base_de_datos.php";
+include_once "../utiles/base_de_datos.php";
 $sentencia = $base_de_datos->prepare("select * from persona where id_persona = ?;");
 $sentencia->execute([$id]);
 $persona = $sentencia->fetchObject();
@@ -75,5 +69,5 @@ if (!$persona) {
 		</form>
 </body>
 <br><br><br>
-<?php include_once "pie.php" ?>
+<?php include_once "../pie.php" ?>
 </html>

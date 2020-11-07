@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Ingresar Persona</title>
-    <link rel="stylesheet" href="utiles/bootstrap.min.css">
-    <script src="utiles/jquery.js" type="text/javascript"></script>
-</head>
 <?php include_once "encabezado.php" ?>
 <br>
 <br>
@@ -53,5 +48,5 @@
 
 </form>
 <br><br><br>
-<?php include_once "pie.php" ?>
+<?php include_once "../pie.php" ?>
 </html>

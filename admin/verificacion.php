@@ -8,5 +8,5 @@ if (($usario == "admin") && ($clave == "DiguillinCheck")) {
 
    header("Location: admin.php");
 } else {
-   header("Location: login.php?error=1");
+   header("Location: index.php?error=1");
 }

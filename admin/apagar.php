@@ -1,22 +1,13 @@
 <!doctype html>
 <html lang="es">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Conexión de PHP con PostgreSQL usando PDO">
-  <meta name="author" content="Parzibyte">
-  <title>Totem</title>
-  <link href="utiles/bootstrap.min.css" rel="stylesheet">
-</head>
-
 <?php include_once "encabezado.php" ?>
 <br>
 <br>
 <br>
 
 
-<body class="p-2">
+<body>
   <br><br>
   <div class="container">
     <br>
@@ -37,5 +28,6 @@
   ?>
 </body>
 <br><br><br>
-<?php include_once "pie.php" ?>
+<?php include_once "../pie.php" ?>
+
 </html>

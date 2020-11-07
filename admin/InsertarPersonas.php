@@ -8,7 +8,7 @@ if (!isset($_POST["nombre"]) || !isset($_POST["apellidos"]) || !isset($_POST["ru
     exit();
 }
 
-include_once "utiles/base_de_datos.php";
+include_once "../utiles/base_de_datos.php";
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
 $rut = $_POST["rut"];

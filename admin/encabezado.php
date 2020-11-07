@@ -7,9 +7,9 @@
     <meta name="description" content="Conexión de PHP con PostgreSQL usando PDO">
     <meta name="author" content="Parzibyte">
     <title>Totem</title>
-    <link href="utiles/bootstrap.min.css" rel="stylesheet">
-    <script src="utiles/jquery.js" type="text/javascript"></script>
-    <script src="utiles/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../utiles/bootstrap.min.css" rel="stylesheet">
+    <script src="../utiles/jquery.js" type="text/javascript"></script>
+    <script src="../utiles/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -42,13 +42,13 @@
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./login.php">Salir</a>
+                    <a class="nav-link" href="./index.php">Salir</a>
                 </li>
             </ul>
         </div>
 
         <div class="text-rigth">
-            <img src="utiles/logo1.jpg" class="rounded" width="100" height="75">
+            <img src="../utiles/logo1.jpg" class="rounded" width="100" height="75">
         </div>
 
     </nav>
