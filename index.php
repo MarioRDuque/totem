@@ -4,6 +4,7 @@
 <head>
   <title>Totem</title>
   <link rel="stylesheet" href="utiles/bootstrap.min.css">
+  <link rel="stylesheet" href="utiles/texto.css">
   <script src="utiles/jquery.js" type="text/javascript"></script>
   <script src="utiles/bootstrap.min.js" type="text/javascript"></script>
 </head>
@@ -43,21 +44,25 @@
   </div>
   <br>
 
-  <div class="row m-0" id="aviso" hidden>
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4 text-center">
+  <div id="aviso" hidden>
+    <div class="text-center">
       <ul>
-        <li>1. Registra tu asistencia</li>
-        <li>2. Checkea tu temperatura</li>
-        <li>3. Desinfecta tus manos</li>
+        <li style="list-style: none;">
+          <h4>1. Registra tu asistencia</h4>
+        </li>
+        <li style="list-style: none;">
+          <h4>2. Checkea tu temperatura</h4>
+        </li>
+        <li style="list-style: none;">
+          <h4>3. Desinfecta tus manos</h4>
+        </li>
       </ul>
-      ... Todo sin contacto
-      <h5>#cuidemonosentretodos</h5>
-    </div>
-    <div class="col-md-4">
+      <h4>... Todo sin contacto</h4>
+      <h4>#cuidemonosentretodos</h5><br>
     </div>
   </div>
+
+
 
   <br>
 
