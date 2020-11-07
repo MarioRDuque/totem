@@ -2,7 +2,7 @@
 <html>
 
 <?php include_once "encabezado.php" ?>
-<br><br><br>
+<br>
 <?php
 
 ?>
@@ -11,7 +11,6 @@ include_once "../utiles/base_de_datos.php";
 $sentencia = $base_de_datos->query("select * from persona");
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
-<br>
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
