@@ -21,7 +21,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto text-center">
                 <li class="nav-item">
                     <a class="nav-link" href="./consulta.php">Exportar</a>
                 </li>
@@ -47,7 +47,7 @@
             </ul>
         </div>
 
-        <div class="text-rigth">
+        <div class="text-center">
             <img src="../utiles/logo1.jpg" class="rounded" width="100" height="75">
         </div>
 
