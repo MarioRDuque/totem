@@ -54,5 +54,10 @@
     </div>
 
 </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php include_once "pie.php" ?>
 </html>
