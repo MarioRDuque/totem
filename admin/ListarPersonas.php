@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <?php include_once "encabezado.php" ?>
 <br>
-<?php
-
-?>
+<?php?>
 <?php
 include_once "../utiles/base_de_datos.php";
 $sentencia = $base_de_datos->query("select * from persona");
@@ -20,10 +17,8 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		<div class="col-md-3 text-right">
 			<a class="btn btn-primary" href="<?php echo "personas.php" ?>">Nuevo</a>
 		</div>
-
 		<br>
 		<br>
-
 		<body>
 			<div class="table-responsive">
 				<table class="table table-bordered">
