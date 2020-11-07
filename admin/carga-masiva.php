@@ -2,26 +2,23 @@
 <html lang="es">
 
 <?php include_once "encabezado.php" ?>
-<br>
-<br>
-<br>
-
-
 <?php
-
-/** @noinspection ForgottenDebugOutputInspection */
 include_once "../utiles/SimpleXLS.php";
 
 $target_dir = 'subidas/';
-$target_file = $target_dir . basename($_FILES["file"]["name"]);
-$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+$xls = null;
 
-move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+if ($_FILES) {
+  $target_file = $target_dir . basename($_FILES["file"]["name"]);
+  $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
-if ($xls = SimpleXLS::parse($target_file)) {
-} else {
-  echo SimpleXLS::parseError();
+  move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+
+  if ($xls = SimpleXLS::parse($target_file)) {
+  } else {
+  }
 }
+
 ?>
 
 
@@ -33,12 +30,12 @@ if ($xls = SimpleXLS::parse($target_file)) {
     <br>
     <div class="outer-container">
       <form action="" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
-        <div>
+        <div class="text-center">
           <label>Elija Archivo Excel</label> <input type="file" name="file" id="file" accept=".xls">
-          <button type="submit" id="submit" name="import" class="btn-submit">Importar Registros</button>
+          <button type="submit" id="submit" name="import" class="btn btn-primary btn-submit">Visualizar</button>
         </div>
       </form>
-
+      <button class="btn btn-primary">Importar </button>
       <div class="table-responsive">
         <table class="table table-bordered">
           <thead class="thead-dark">
@@ -52,14 +49,16 @@ if ($xls = SimpleXLS::parse($target_file)) {
           </thead>
           <tbody>
             <br>
-            <?php foreach ($xls->rows() as $totem) { ?>
-              <tr>
-                <td><?php echo $totem[0] ?></td>
-                <td><?php echo $totem[1] ?></td>
-                <td><?php echo $totem[2] ?></td>
-                <td><?php echo $totem[3] ?></td>
-                <td><?php echo $totem[4] ?></td>
-              </tr>
+            <?php if ($xls) { ?>
+              <?php foreach ($xls->rows() as $totem) { ?>
+                <tr>
+                  <td><?php echo $totem[0] ?></td>
+                  <td><?php echo $totem[1] ?></td>
+                  <td><?php echo $totem[2] ?></td>
+                  <td><?php echo $totem[3] ?></td>
+                  <td><?php echo $totem[4] ?></td>
+                </tr>
+              <?php } ?>
             <?php } ?>
           </tbody>
         </table>
