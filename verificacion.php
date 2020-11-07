@@ -1,17 +1,12 @@
 <?php
 
-   $usario = $_GET["usuario"];
-   $clave = $_GET["clave"];
+$usario = $_GET["usuario"];
+$clave = $_GET["clave"];
 
 
-   if (($usario == "admin") && ($clave == "DiguillinCheck")) {
+if (($usario == "admin") && ($clave == "DiguillinCheck")) {
 
-      header("Location: admin.php");
-
-   } else {
-      header("Location: login.php");
-     
-   }
-
-?>
-
+   header("Location: admin.php");
+} else {
+   header("Location: login.php?error=1");
+}
