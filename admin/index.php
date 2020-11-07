@@ -15,7 +15,6 @@ if ($_REQUEST)
 ?>
 
 <body style="margin: 8px;">
-  <br>
 
   <?php
     if ($error) {
@@ -25,16 +24,13 @@ if ($_REQUEST)
      </div>";
     }
     ?>
-
-  <br>
   <div class="text-center">
     <h1>Iniciar Sesion</h1>
   </div>
-  <br><br>
+  <br>
   <div class="text-center">
     <img src="../utiles/login.jpg" class="rounded" width="150" height="150">
   </div>
-  <br>
   <br>
   <div id="login">
     <form action="verificacion.php" method="GET">
@@ -66,7 +62,7 @@ if ($_REQUEST)
     </form>
   </div>
 </body>
-<br><br><br>
+<br><br><br><br>
 <?php include_once "../pie.php" ?>
 
 </html>
