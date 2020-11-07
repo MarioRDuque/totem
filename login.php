@@ -37,7 +37,7 @@
         </div>
         <div class="col-6">
         <label>Contraseña</label>
-        <input type="password" class="tex form-control" name="contraseña" placeholder="contraseña" required>
+        <input type="password" class="tex form-control" name="clave" placeholder="clave" required>
     </div>
     <div class="col-3">
     </div>

@@ -1,10 +1,10 @@
 <?php
 
    $usario = $_GET["usuario"];
-   $contraseña = $_GET["contraseña"];
+   $clave = $_GET["clave"];
 
 
-   if (($usario == "admin") && ($contraseña == "123456789")) {
+   if (($usario == "admin") && ($clave == "DiguillinCheck")) {
 
       header("Location: admin.php");
 
