@@ -45,5 +45,6 @@ $f1 = date("Y-m-d H:i:s");
       <button type="submit" class="btn btn-success">Fijar Horario</button>
     </form>
 </body>
-
+<br><br><br>
+<?php include_once "pie.php" ?>
 </html>

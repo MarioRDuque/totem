@@ -10,8 +10,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 <div class="text-center">
     <h1>Registrar Persona</h1>
 </div>
@@ -54,10 +52,6 @@
     </div>
 
 </form>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br><br><br>
 <?php include_once "pie.php" ?>
 </html>

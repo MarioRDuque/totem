@@ -37,4 +37,6 @@
   ?>
 </body>
 
+<br><br><br>
+<?php include_once "pie.php" ?>
 </html>
