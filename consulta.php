@@ -8,8 +8,6 @@
 </head>
 <?php include_once "encabezado.php" ?>
 <br>
-<br>
-<br>
 <?php
 $inicio = "";
 $fin = "";
@@ -34,5 +32,6 @@ $fin = "";
       <button type="submit" class="btn btn-success">Exportar</button>
     </form>
 </body>
-
+<br><br><br>
+<?php include_once "pie.php" ?>
 </html>
