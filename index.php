@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="utiles/texto.css">
   <script src="utiles/jquery.js" type="text/javascript"></script>
   <script src="utiles/bootstrap.min.js" type="text/javascript"></script>
+  <script src="reloj.js" type="text/javascript"></script>
 </head>
 
 <body class="p-2">
@@ -23,6 +24,7 @@
       <img src="utiles/logo1.jpg" class="img-fluid" alt="..."></div>
     <input type="text" id="idRegistro" hidden>
     <div class="col-md-4">
+      <br><br>
       <div id="reloj"></div>
     </div>
   </div>
@@ -62,8 +64,6 @@
     </div>
   </div>
 
-
-
   <br>
 
   <div class="row m-0">
@@ -77,6 +77,7 @@
 
   <br><br>
 </body>
+
 <footer class="page-footer font-small stylish-color-dark pt-4" style="bottom: 0; position: fixed; width: 100%;">
   <div class="footer-copyright text-center py-3 bg-light">
     <img src="utiles/logo1.jpg" class="rounded-circle" width="40" height="34">
@@ -86,6 +87,7 @@
 
   </div>
 </footer>
+
 </html>
 
 <script>
@@ -119,7 +121,7 @@
   setInterval(function() {
     var idRegistro = document.getElementById("idRegistro").value;
     var cuerpo = document.getElementById("cuerpo").innerHTML;
-    $("#reloj").load("reloj.php");
+    // $("#reloj").load("reloj.php");
     $("#cuerpo").load("funciones.php", {
       'idRegistro': idRegistro,
       'cuerpo': cuerpo
@@ -127,5 +129,5 @@
   }, 300);
   setInterval(function() {
     location.reload();
-  }, 600000);
+  }, 300000);
 </script>
