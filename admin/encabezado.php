@@ -60,3 +60,13 @@
     </nav>
 
 </body>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('alerta') ? document.getElementById('alerta').hidden = true : null;
+        document.getElementById('alerta2') ? document.getElementById('alerta2').hidden = true : null;
+        if (typeof window.history.pushState == 'function') {
+            window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF']; ?>');
+        }
+    }, 3000);
+</script>

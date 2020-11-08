@@ -11,19 +11,19 @@
 <?php
 $error = null;
 if ($_REQUEST)
-    $error = $_REQUEST['error'];
+  $error = $_REQUEST['error'];
 ?>
 
 <body style="margin: 8px;">
 
   <?php
-    if ($error) {
-        echo "<div class='alert alert-warning' role='alert' id='alerta'>
+  if ($error) {
+    echo "<div class='alert alert-warning' role='alert' id='alerta'>
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
         <strong>Error!</strong> Usuario o clave incorrectas!
      </div>";
-    }
-    ?>
+  }
+  ?>
   <div class="text-center">
     <h1>Iniciar Sesion</h1>
   </div>
@@ -68,7 +68,7 @@ if ($_REQUEST)
 </html>
 
 <script>
-  setTimeout(function () {
-    document.getElementById('alerta').hidden = true;
+  setTimeout(function() {
+    document.getElementById('alerta') ? document.getElementById('alerta').hidden = true : null;
   }, 3000);
 </script>
