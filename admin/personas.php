@@ -6,7 +6,7 @@ if ($_REQUEST)
   $fallo = $_REQUEST['fallo'];
 ?>
 
-<body style="margin: 8px;">
+<body>
 
   <?php
   if ($fallo) {
