@@ -4,13 +4,12 @@
 <head>
   <title>Totem</title>
   <link rel="stylesheet" href="utiles/bootstrap.min.css">
-  <link rel="stylesheet" href="utiles/texto.css">
   <script src="utiles/jquery.js" type="text/javascript"></script>
   <script src="utiles/bootstrap.min.js" type="text/javascript"></script>
   <script src="reloj.js" type="text/javascript"></script>
 </head>
 
-<body class="p-2">
+<body class="p-2 mt-5">
   <br>
 
   <div class="row m-0">
@@ -31,7 +30,7 @@
 
   <br><br>
 
-  <div class="row m-0">
+  <div class="row m-0 mt-5">
     <div id="car1" class="carousel-item active" style="border: 0;">
       <video id="mi-video" autoplay muted class="d-block w-100" style="border: 0;">
         <source src="utiles/video1.mp4" type="video/mp4">
@@ -41,30 +40,35 @@
 
   <br><br>
 
-  <div class="">
+  <div class="mt-5">
     <div id="cuerpo"></div>
   </div>
   <br>
 
-  <div id="aviso" hidden>
+  <div id="aviso" hidden class="mt-5">
     <div class="text-center">
       <ul>
         <li style="list-style: none;">
-          <h4>1. Registra tu asistencia</h4>
+          <h2>1. Registra tu asistencia</h2>
         </li>
         <li style="list-style: none;">
-          <h4>2. Checkea tu temperatura</h4>
+          <h2>2. Checkea tu temperatura</h2>
         </li>
         <li style="list-style: none;">
-          <h4>3. Desinfecta tus manos</h4>
+          <h2>3. Desinfecta tus manos</h2>
         </li>
       </ul>
-      <h4>... Todo sin contacto</h4>
-      <h4>#cuidemonosentretodos</h5><br>
+      <h2>... Todo sin contacto</h2>
+      <h2>#cuidemonosentretodos</h2><br>
     </div>
   </div>
 
   <br>
+
+  <br><br>
+</body>
+
+<footer class="page-footer font-small stylish-color-dark pt-4 mb-4" style="bottom: 0; position: fixed; width: 100%;">
 
   <div class="row m-0">
     <div class="col-md-4">
@@ -75,11 +79,7 @@
     </div>
   </div>
 
-  <br><br>
-</body>
-
-<footer class="page-footer font-small stylish-color-dark pt-4" style="bottom: 0; position: fixed; width: 100%;">
-  <div class="footer-copyright text-center py-3 bg-light">
+  <div class="footer-copyright text-center py-3 bg-light mt-3">
     <img src="utiles/logo1.jpg" class="rounded-circle" width="40" height="34">
     <a href="https://www.checkseguro.com/">www.checkseguro.com </a>
     <img src="utiles/icono_instagram.jpg" class="rounded-circle" width="63" height="43">@check_seguro
