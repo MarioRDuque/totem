@@ -49,13 +49,13 @@
     <div class="text-center">
       <ul>
         <li style="list-style: none;">
-         <h1>① Registra tu asistencia</h1>
+          <h1><b> ① </b>Registra tu asistencia</h1>
         </li>
         <li style="list-style: none;">
-        <h1>② Checkea tu temperatura</h1>
+          <h1><b> ② </b>Checkea tu temperatura</h1>
         </li>
         <li style="list-style: none;">
-        <h1>③ Desinfecta tus manos</h1>
+          <h1><b> ③ </b> Desinfecta tus manos</h1>
         </li>
       </ul>
       <h1>... Todo sin contacto</h1>
