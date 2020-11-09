@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<?php
+$daniado = false;
+if (isset($_GET["daniado"]))
+  $daniado = $_GET['daniado'];
+?>
+
+<body>
+
+  <?php
+  if ($daniado) {
+    echo "<div class='alert alert-danger' role='alert' id='alerta'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <strong>Error!</strong>    RUT o RFID ingresado, ya exite.
+     </div>";
+  }
+  ?>
 
 <body>
 	<?php include_once "encabezado.php" ?>
