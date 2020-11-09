@@ -21,10 +21,16 @@ $apellidos = $_POST["apellidos"];
 $rut = $_POST["rut"];
 $rfid = $_POST["rfid"];
 
-$sentencia = $base_de_datos->prepare("UPDATE persona SET nombre = ?, apellidos = ?, rut = ?, rfid = ? WHERE id_persona = ?;");
-$resultado = $sentencia->execute([strtoupper($nombre), strtoupper($apellidos), strtoupper($rut), strtoupper($rfid), $id]);
-if ($resultado === true) {
-    header("Location: ListarPersonas.php?guardado=1");
-} else {
-    echo "Algo salió mal. Por favor verifica que la tabla exista, así como el ID del usuario";
+try {
+
+    $sentencia = $base_de_datos->prepare("UPDATE persona SET nombre = ?, apellidos = ?, rut = ?, rfid = ? WHERE id_persona = ?;");
+    $resultado = $sentencia->execute([strtoupper($nombre), strtoupper($apellidos), strtoupper($rut), strtoupper($rfid), $id]);
+
+    if ($resultado === true) {
+        header("Location: ListarPersonas.php?guardado=1");
+    } else {
+        header("Location: EditarPersonas.php?id=$id&&daniado=1");
+    }
+} catch (\Throwable $th) {
+    header("Location: EditarPersonas.php?id=$id&&daniado=1");
 }
