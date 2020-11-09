@@ -18,4 +18,4 @@ $hora = $_POST["hora"];
 
 $horaminuto = str_replace(":", "",  $hora);
 
-exec("sudo sh /var/www/html/totem/admin/actualizafecha.sh $mes$dia$horaminuto$anio");
+exec("sudo sh /home/pi/shells/actualizafecha.sh $mes$dia$horaminuto$anio");

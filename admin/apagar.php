@@ -13,7 +13,7 @@
     <br>
     <h1 class="text-center">Apagar</h1>
     <br>
-    <form action="<?php exec("sudo sh /var/www/html/totem/admin/apaga.sh") ?>" method="POST" class="text-center">
+    <form action="<?php exec("sudo sh /home/pi/shells/apaga.sh") ?>" method="POST" class="text-center">
       <button type="submit" class="btn btn-success">Apagar</button>
     </form>
   </div>

@@ -13,7 +13,7 @@
     <br>
     <h1 class="text-center">Reiniciar</h1>
     <br>
-    <form action="<?php exec("sudo sh /var/www/html/totem/admin/reinicia.sh") ?>" method="POST" class="text-center">
+    <form action="<?php exec("sudo sh /home/pi/shells/reinicia.sh") ?>" method="POST" class="text-center">
       <button type="submit" class="btn btn-success">Reiniciar</button>
     </form>
   </div>
