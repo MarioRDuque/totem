@@ -9,7 +9,7 @@ include_once "../utiles/base_de_datos.php";
 $sentencia = $base_de_datos->prepare("DELETE FROM persona WHERE id_persona = ?;");
 $resultado = $sentencia->execute([$id]);
 if ($resultado === true) {
-    header("Location: ListarPersonas.php");
+    header("Location: ListarPersonas.php?guardado=1");
 } else {
     echo "Algo salió mal";
 }

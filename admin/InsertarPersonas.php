@@ -20,7 +20,7 @@ $resultado = $sentencia->execute([strtoupper($nombre), strtoupper($apellidos), s
 
 
  if ($resultado === true) {
-    header("Location: ListarPersonas.php");
+    header("Location: ListarPersonas.php?guardado=1");
  } else {
      echo "Algo salió mal. Por favor verifica que la tabla exista";
  }

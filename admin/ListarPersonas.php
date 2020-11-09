@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<?php
+$guardado = false;
+if ($_REQUEST)
+  $guardado = $_REQUEST['guardado'];
+?>
+
+<body style="margin: 8px;">
+
+  <?php
+  if ($guardado) {
+    echo "<div class='alert alert-success' role='alert' id='alerta'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <strong>Exito!</strong>    La operación solicitada se ha realizado correctamente.
+     </div>";
+  }
+  ?>
 <?php include_once "encabezado.php" ?>
 <br>
 <?php?>
