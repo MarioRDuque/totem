@@ -8,7 +8,10 @@ if ($_REQUEST)
 
 <body>
 
-  <?php
+<?php include_once "encabezado.php" ?>
+<br>
+<div class="container">
+<?php
   if ($guardado) {
     echo "<div class='alert alert-success' role='alert' id='alerta'>
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -16,8 +19,7 @@ if ($_REQUEST)
      </div>";
   }
   ?>
-<?php include_once "encabezado.php" ?>
-<br>
+  <br>
 <?php?>
 <?php
 include_once "../utiles/base_de_datos.php";
@@ -91,6 +93,7 @@ $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 			</div>
 		</body>
 	</div>
+</div>
 </div>
 <br><br><br>
 <?php include_once "../pie.php" ?>

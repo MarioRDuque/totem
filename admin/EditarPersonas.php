@@ -8,7 +8,11 @@ if (isset($_GET["daniado"]))
 
 <body>
 
-  <?php
+<body>
+	<?php include_once "encabezado.php" ?>
+	<br>
+	<div class="container">
+	<?php
   if ($daniado) {
     echo "<div class='alert alert-danger' role='alert' id='alerta'>
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -16,11 +20,6 @@ if (isset($_GET["daniado"]))
      </div>";
   }
   ?>
-
-<body>
-	<?php include_once "encabezado.php" ?>
-	<br>
-	<br>
 	<br>
 	<?php
 	if (!isset($_GET["id"])) {
@@ -86,7 +85,7 @@ if (isset($_GET["daniado"]))
 			</div>
 		</form>
 	</div>
-
+	</div>
 </body>
 <br><br><br>
 <?php include_once "../pie.php" ?>
