@@ -19,3 +19,5 @@ $hora = $_POST["hora"];
 $horaminuto = str_replace(":", "",  $hora);
 
 exec("sudo sh /home/pi/shells/actualizafecha.sh $mes$dia$horaminuto$anio");
+
+header("Location: ajustes.php?exito=1");

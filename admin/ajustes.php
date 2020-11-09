@@ -3,6 +3,12 @@
 
 <?php include_once "encabezado.php" ?>
 <?php
+
+$exito = false;
+if ($_REQUEST) {
+  $exito = $_REQUEST['exito'];
+}
+
 $fecha = date("Y-m-d H:i:s");
 $hora = "";
 
@@ -16,6 +22,14 @@ $f1 = date("Y-m-d H:i:s");
 <body>
   <div class="container">
     <br>
+    <?php
+    if ($exito) {
+      echo "<div class='alert alert-success' role='alert' id='alerta'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <strong>Exito!</strong>    La operación solicitada se ha realizado correctamente.
+     </div>";
+    }
+    ?>
     <h1 class="text-center">Ajuste Reloj</h1>
     <br>
     <h3 class="text-center">Hora Actual</h3>
