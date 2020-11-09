@@ -55,15 +55,15 @@ if ($data) {
     $codigoError = $data->cod_error;
     switch ($codigoError) {
       case '0':
-        echo "<h2 class='text-center'>Bienvenido " . $data->nombre . " " . $data->apellidos . ";</h2>  <br>";
-        echo "<h2 class='text-center'> Su Temperatura es: " . $data->temperatura . " °C</h2>";
+        echo "<h1 class='text-center'>Bienvenido " . $data->nombre . " " . $data->apellidos . ";</h1>  <br>";
+        echo "<h1 class='text-center'> Su Temperatura es: " . $data->temperatura . " °C</h1>";
         if ($data != null && $data->id_persona == null) {
-          echo "<h3 class='text-center'> Por favor dirígete a La Administración para completar tu registro.</h3>";
+          echo "<h2 class='text-center'> Por favor dirígete a La Administración para completar tu registro.</h2>";
         }
         break;
       case '4':
-        echo "<h2 class='text-center'>Bienvenido " . $data->nombre . " " . $data->apellidos . ";</h2>  <br>";
-        echo "<h3 class='text-center'> Por Favor, intenta nuevamente.</h3>";
+        echo "<h1 class='text-center'>Bienvenido " . $data->nombre . " " . $data->apellidos . ";</h1>  <br>";
+        echo "<h2 class='text-center'> Por Favor, intenta nuevamente.</h2>";
         break;
     }
   }

@@ -41,25 +41,26 @@
   <br><br>
 
   <div class="mt-5">
+    <br><br>
     <div id="cuerpo"></div>
   </div>
   <br>
 
-  <div id="aviso" hidden class="mt-5">
+  <div id="aviso" hidden class="mt-4">
     <div class="text-center">
       <ul>
         <li style="list-style: none;">
-          <h2>1. Registra tu asistencia</h2>
+          <h1>1. Registra tu asistencia</h1>
         </li>
         <li style="list-style: none;">
-          <h2>2. Checkea tu temperatura</h2>
+          <h1>2. Checkea tu temperatura</h1>
         </li>
         <li style="list-style: none;">
-          <h2>3. Desinfecta tus manos</h2>
+          <h1>3. Desinfecta tus manos</h1>
         </li>
       </ul>
-      <h2>... Todo sin contacto</h2>
-      <h2>#cuidemonosentretodos</h2><br>
+      <h1>... Todo sin contacto</h1>
+      <h1>#cuidemonosentretodos</h1><br>
     </div>
   </div>
 
