@@ -14,13 +14,16 @@ $apellidos = $_POST["apellidos"];
 $rut = $_POST["rut"];
 $rfid = $_POST["rfid"];
 
+try {
 $sentencia = $base_de_datos->prepare("INSERT INTO persona(nombre, apellidos, rut, rfid) VALUES (?, ?, ?, ?);");
 $resultado = $sentencia->execute([strtoupper($nombre), strtoupper($apellidos), strtoupper($rut), strtoupper($rfid)]);
-
-
 
  if ($resultado === true) {
     header("Location: ListarPersonas.php?guardado=1");
  } else {
-     echo "Algo salió mal. Por favor verifica que la tabla exista";
+    header("Location: personas.php?fallo=1");
  }
+} catch (\Throwable $th) {
+    header("Location: personas.php?fallo=1");
+}
+ 

@@ -6,7 +6,7 @@ if ($_REQUEST)
   $guardado = $_REQUEST['guardado'];
 ?>
 
-<body style="margin: 8px;">
+<body>
 
   <?php
   if ($guardado) {
