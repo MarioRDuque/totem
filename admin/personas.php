@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
+<?php
+$fallo = false;
+if ($_REQUEST)
+  $fallo = $_REQUEST['fallo'];
+?>
 
+<body style="margin: 8px;">
+
+  <?php
+  if ($fallo) {
+    echo "<div class='alert alert-danger' role='alert' id='alerta'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <strong>Error!</strong>    RUT o RFID ingresado, ya exite.
+     </div>";
+  }
+  ?>
 <?php include_once "encabezado.php" ?>
 <br>
 <br>
