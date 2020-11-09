@@ -45,18 +45,17 @@
     <div id="cuerpo"></div>
   </div>
   <br>
-
-  <div id="aviso" hidden class="mt-4">
+  <div id="aviso" hidden class="mt-4">②
     <div class="text-center">
       <ul>
         <li style="list-style: none;">
-          <h1>1. Registra tu asistencia</h1>
+         <h1>① Registra tu asistencia</h1>
         </li>
         <li style="list-style: none;">
-          <h1>2. Checkea tu temperatura</h1>
+        <h1>② Checkea tu temperatura</h1>
         </li>
         <li style="list-style: none;">
-          <h1>3. Desinfecta tus manos</h1>
+        <h1>③ Desinfecta tus manos</h1>
         </li>
       </ul>
       <h1>... Todo sin contacto</h1>
