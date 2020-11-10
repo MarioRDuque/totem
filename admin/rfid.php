@@ -25,16 +25,16 @@ if ($_REQUEST) {
         }
         ?>
         <h1 class="text-center">RFID</h1>
-        
+
         <br>
         <div class="form">
-            <form action="rfid-funciones.php" method="POST" class="text-center">
+            <form action="rfid-activar.php" method="POST" class="text-center">
                 <button type="submit" class="btn btn-success">Activar</button>
             </form>
         </div>
         <br><br>
         <div class="form">
-            <form action="rfid-funciones.php" method="POST" class="text-center">
+            <form action="rfid-desactivar.php" method="POST" class="text-center">
                 <button type="submit" class="btn btn-success">Desactivar</button>
             </form>
         </div>
