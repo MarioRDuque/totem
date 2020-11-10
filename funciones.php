@@ -67,12 +67,22 @@ if ($data) {
         break;
     }
   }
+} else {
+  echo "
+      <script type=\"text/javascript\">
+      document.getElementById('aviso').hidden=false;
+      </script>   ";
 }
 
 if ($data2) {
   echo "
   <script type=\"text/javascript\">
    document.getElementById('tambiente').innerHTML=' $data2->tambiente  °C';
+  </script>   ";
+} else {
+  echo "
+  <script type=\"text/javascript\">
+   document.getElementById('tambiente').innerHTML= '23.875 °C';
   </script>   ";
 }
 
