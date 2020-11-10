@@ -33,11 +33,11 @@ if ($_REQUEST) {
             </form>
         </div>
         <br><br>
-        <div class="form">
+        <!-- <div class="form">
             <form action="rfid-desactivar.php" method="POST" class="text-center">
                 <button type="submit" class="btn btn-success">Desactivar</button>
             </form>
-        </div>
+        </div> -->
     </div>
 
 </body>
