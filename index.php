@@ -121,7 +121,6 @@
   setInterval(function() {
     var idRegistro = document.getElementById("idRegistro").value;
     var cuerpo = document.getElementById("cuerpo").innerHTML;
-    // $("#reloj").load("reloj.php");
     $("#cuerpo").load("funciones.php", {
       'idRegistro': idRegistro,
       'cuerpo': cuerpo
@@ -129,5 +128,5 @@
   }, 300);
   setInterval(function() {
     location.reload();
-  }, 300000);
+  }, 500000);
 </script>
