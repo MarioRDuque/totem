@@ -45,7 +45,7 @@
     <div id="cuerpo"></div>
   </div>
   <br>
-  <div id="aviso" hidden class="mt-4">②
+  <div id="aviso" hidden class="mt-4">
     <div class="text-center">
       <ul>
         <li style="list-style: none;">
