@@ -5,8 +5,10 @@
 <?php
 
 $exito = false;
+$texto = false;
 if ($_REQUEST) {
   $exito = $_REQUEST['exito'];
+  $texto = $_REQUEST['texto'];
 }
 
 $fecha = date("Y-m-d H:i:s");
@@ -26,7 +28,7 @@ $f1 = date("Y-m-d H:i:s");
     if ($exito) {
       echo "<div class='alert alert-success' role='alert' id='alerta'>
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-        <strong>Exito!</strong>    La operación solicitada se ha realizado correctamente.
+        <strong>Exito! $texto </strong>    La operación solicitada se ha realizado correctamente.
      </div>";
     }
     ?>
