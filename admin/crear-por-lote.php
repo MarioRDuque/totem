@@ -12,7 +12,7 @@ $data = (unserialize(base64_decode($_POST['result'])));
 // }
 
 foreach ($data as $totem) {
-  if ($totem[0] != "Nombre") {
+  if ($totem[0] != "Nombre" && $totem[2]) {
     try {
       $sentencia = $base_de_datos->prepare("INSERT INTO persona(nombre, apellidos, rut, rfid, nfc) VALUES (?, ?, ?, ?, ?);");
       $resultado = $sentencia->execute([strtoupper($totem[0]), strtoupper($totem[1]), strtoupper($totem[2]), strtoupper($totem[3]), strtoupper($totem[4])]);

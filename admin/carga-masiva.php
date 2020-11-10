@@ -6,7 +6,7 @@
 include_once "../utiles/SimpleXLS.php";
 include_once "../utiles/base_de_datos.php";
 
-$target_dir = '/home/pi/subidos/';
+$target_dir = 'subidas/';
 $xls = null;
 
 $mensaje1 = "";
@@ -79,7 +79,7 @@ if ($_FILES) {
           <?php if ($xls) { ?>
             <?php foreach ($xls->rows() as $totem) { ?>
               <tr>
-                <?php if ($totem[0] != "Nombre") { ?>
+                <?php if ($totem[0] != "Nombre" && $totem[2]) { ?>
                   <td><?php echo $totem[0] ?></td>
                   <td><?php echo $totem[1] ?></td>
                   <td><?php echo $totem[2] ?></td>
