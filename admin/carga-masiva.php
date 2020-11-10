@@ -6,7 +6,7 @@
 include_once "../utiles/SimpleXLS.php";
 include_once "../utiles/base_de_datos.php";
 
-$target_dir = 'subidas/';
+$target_dir = '/home/pi/subidos/';
 $xls = null;
 
 $mensaje1 = "";
