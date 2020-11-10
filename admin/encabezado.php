@@ -38,6 +38,9 @@
                     <a class="nav-link" href="./ajustes.php">Ajustes</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="./rfid.php">RFID</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="./reiniciar.php">Reiniciar</a>
                 </li>
                 <li class="nav-item">
