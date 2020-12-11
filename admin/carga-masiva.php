@@ -12,10 +12,10 @@ $xls = null;
 $mensaje1 = "";
 $mensaje2 = "";
 if ($_REQUEST && $_REQUEST['mensaje1']) {
-  $mensaje1 = $_REQUEST['mensaje1'];
+  $mensaje1 = utf8_encode($_REQUEST['mensaje1']);
 }
 if ($_REQUEST && $_REQUEST['mensaje2']) {
-  $mensaje2 = $_REQUEST['mensaje2'];
+  $mensaje2 = utf8_encode($_REQUEST['mensaje2']);
 }
 
 if ($_FILES) {
@@ -80,11 +80,11 @@ if ($_FILES) {
             <?php foreach ($xls->rows() as $totem) { ?>
               <tr>
                 <?php if ($totem[0] != "Nombre" && $totem[2]) { ?>
-                  <td><?php echo $totem[0] ?></td>
-                  <td><?php echo $totem[1] ?></td>
-                  <td><?php echo $totem[2] ?></td>
-                  <td><?php echo $totem[3] ?></td>
-                  <td><?php echo $totem[4] ?></td>
+                  <td><?php echo utf8_encode($totem[0]) ?></td>
+                  <td><?php echo utf8_encode($totem[1]) ?></td>
+                  <td><?php echo utf8_encode($totem[2]) ?></td>
+                  <td><?php echo utf8_encode($totem[3]) ?></td>
+                  <td><?php echo utf8_encode($totem[4]) ?></td>
                 <?php } ?>
               </tr>
             <?php } ?>
